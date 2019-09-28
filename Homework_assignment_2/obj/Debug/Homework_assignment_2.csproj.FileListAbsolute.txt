@@ -1,0 +1,7 @@
+C:\Users\Kodu\Desktop\Homework_assignment_2\Homework_assignment_2\bin\Debug\Homework_assignment_2.exe.config
+C:\Users\Kodu\Desktop\Homework_assignment_2\Homework_assignment_2\bin\Debug\Homework_assignment_2.exe
+C:\Users\Kodu\Desktop\Homework_assignment_2\Homework_assignment_2\bin\Debug\Homework_assignment_2.pdb
+C:\Users\Kodu\Desktop\Homework_assignment_2\Homework_assignment_2\obj\Debug\Homework_assignment_2.csprojAssemblyReference.cache
+C:\Users\Kodu\Desktop\Homework_assignment_2\Homework_assignment_2\obj\Debug\Homework_assignment_2.csproj.CoreCompileInputs.cache
+C:\Users\Kodu\Desktop\Homework_assignment_2\Homework_assignment_2\obj\Debug\Homework_assignment_2.exe
+C:\Users\Kodu\Desktop\Homework_assignment_2\Homework_assignment_2\obj\Debug\Homework_assignment_2.pdb
