@@ -10,15 +10,15 @@ namespace Homework_assignment_2
     {
         static void Main(string[] args)
         {
-        
-           
+                 
+            Console.WriteLine("Please, enter your name:");
+            string name = Console.ReadLine();
+
+            Start:
             int userScore = 0;
             int cpuScore = 0;
             string userChoise;
             int cpuChoise;
-
-            Console.WriteLine("Please, enter your name:");
-            string name = Console.ReadLine();
 
             while (userScore < 3 && cpuScore < 3)
             {
@@ -32,11 +32,11 @@ namespace Homework_assignment_2
                 {
                     case 1:
                         Console.WriteLine("stone");
-                    if (userChoise== "stone")
+                    if (userChoise.ToLower() == "stone")
                     {
                         continue;
                     }
-                    else if (userChoise== "paper")
+                    else if (userChoise.ToLower() == "paper")
                     {
                         userScore++;
                     }
@@ -48,11 +48,11 @@ namespace Homework_assignment_2
 
                     case 2:
                         Console.WriteLine("paper");
-                    if (userChoise== "stone")
+                    if (userChoise.ToLower() == "stone")
                     {
                         cpuScore++;
                     }
-                    else if (userChoise == "paper")
+                    else if (userChoise.ToLower() == "paper")
                     {
                         continue;
                     }
@@ -64,11 +64,11 @@ namespace Homework_assignment_2
 
                     case 3:
                         Console.WriteLine("scissors");
-                    if (userChoise == "scissors")
+                    if (userChoise.ToLower() == "scissors")
                     {
                         continue;
                     }
-                    else if (userChoise == "stone")
+                    else if (userChoise.ToLower() == "stone")
                     {
                         userScore++;
                     }
@@ -79,59 +79,54 @@ namespace Homework_assignment_2
                     break;
 
                     default:
-                        Console.WriteLine($"Invalid entry");
+                        
                     break;
 
                 }
 
-            Console.WriteLine($"{name} got {userScore} points and CPU got {cpuScore} points.");
-
+                Console.WriteLine($"{name} got {userScore} points and CPU got {cpuScore} points.");
+             
                 if (userScore == 3)
                 {
                     Console.WriteLine($"{name} won a game!");
+                    Console.WriteLine($"{name}, would you like to play again? Y/N");
+                    string answer = Console.ReadLine();
+                    if (answer.ToUpper() == "Y")
+                    {
+                        goto Start;
+                    }
+
+                    else
+                    {
+                        Console.WriteLine ("Game over!");
+                    }
                 }
                 else if (cpuScore == 3)
                 {
                     Console.WriteLine($"CPU won a game!");
+                    Console.WriteLine($"{name}, would you like to play again? Y/N");
+                    string answer = Console.ReadLine();
+                    if (answer.ToUpper() == "Y")
+                    {
+                        goto Start;
+                    }
+
+                    else
+                    {
+                        Console.WriteLine ("Game over!");
+                    }
+
                 }
                 else
-                {
-                    
+                { 
+                 continue;   
                 }
-
-                    
-
-
-
-
 
 
             }
                
             
             Console.ReadLine();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-           
-
-
-
 
             
 
