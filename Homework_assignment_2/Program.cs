@@ -19,8 +19,9 @@ namespace Homework_assignment_2
             int cpuScore = 0;
             string userChoise;
             int cpuChoise;
+            bool gameOver = false;
 
-            while (userScore < 3 && cpuScore < 3)
+            while (!gameOver)
             {
 
             Random rnd = new Random();
@@ -85,47 +86,36 @@ namespace Homework_assignment_2
                 }
 
                 Console.WriteLine($"{name} got {userScore} points and CPU got {cpuScore} points.");
-             
+
                 if (userScore == 3)
                 {
                     Console.WriteLine($"{name} won a game!");
-                    Console.WriteLine($"{name}, would you like to play again? Y/N");
-                    string answer = Console.ReadLine();
-                    if (answer.ToUpper() == "Y")
-                    {
-                        goto Start;
-                    }
-
-                    else
-                    {
-                        Console.WriteLine ("Game over!");
-                    }
                 }
-                else if (cpuScore == 3)
+                else if (cpuScore==3)
                 {
                     Console.WriteLine($"CPU won a game!");
-                    Console.WriteLine($"{name}, would you like to play again? Y/N");
-                    string answer = Console.ReadLine();
-                    if (answer.ToUpper() == "Y")
+                }
+                else
+                {
+                    continue;
+                }
+
+                Console.WriteLine($"{name}, would you like to play again? Y/N");
+                string answer = Console.ReadLine();
+
+                if (answer.ToUpper() == "Y")
                     {
                         goto Start;
                     }
 
-                    else
+                else
                     {
                         Console.WriteLine ("Game over!");
+                        gameOver =true;
                     }
-
-                }
-                else
-                { 
-                 continue;   
-                }
-
 
             }
                
-            
             Console.ReadLine();
 
             
